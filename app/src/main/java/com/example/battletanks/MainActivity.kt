@@ -30,7 +30,6 @@ class MainActivity : AppCompatActivity() {
             KEYCODE_DPAD_LEFT -> move (LEFT)
             KEYCODE_DPAD_RIGHT ->move (RIGHT)
         }
-
         return super.onKeyDown(keyCode, event)
     }
 
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             }
             LEFT -> {
                 binding.myTank.rotation = 278f
-                (binding.myTank.layoutParams as FrameLayout.LayoutParams).leftMargin = 50
+                (binding.myTank.layoutParams as FrameLayout.LayoutParams).leftMargin -= 50
             }
             RIGHT -> {
                 binding.myTank.rotation = 90f
